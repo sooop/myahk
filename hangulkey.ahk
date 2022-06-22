@@ -83,11 +83,10 @@ return
 #If
 :*:\8)::(headphones)
 
-; ⓐ ⓐ ㅇ ① d a8a7
 
 ; Press F2 for 0.25sec it works as CapsLock
 $F2::
-$SC1F2::
+;$SC1F2::
     ToggleCapsLock()
     {
         theKey := SubStr(A_ThisHotkey, 2)
@@ -105,26 +104,13 @@ $SC1F2::
     }
 ;
 Return
-; KeyWait F2, T0.25
-; WasLate := ErrorLevel <> 0
-; if (!WasLate)
-; 	Send {F2}
-; else
-; {
-; 	if (A_TimeSincePriorHotkey > 210)
-; 	{
-; 		SetCapsLockState % !GetKeyState("CapsLock", "T")
-; 		; Sleep 200
-; 	}
-; }
-; Return
 
 $+F1::
 MsgBox % IMECheckHangul()
 
 
 OnExit("ExitFunc")
-    
+
 ExitFunc(ExitReason, ExitCode)
 {
 	DllCall("FreeLibrary", "Ptr", hModule)
