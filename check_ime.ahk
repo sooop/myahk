@@ -1,29 +1,17 @@
 ; Detect Hangul/English Langugage
+; AutoHotkey V2
 
-IME_CHECK()
+IMECheckHangul()
 {
-	WinGet, hWnd, ID, A
-	Return Send_ImeControl(ImmGetDefaultIMEWnd(hWnd), 0x005, "")
+    hWnd := WinGetID("A")
+    IMEWnd := DllCall("imm32\ImmGetDefaultIMEWnd", "UInt", hWnd, "UInt")
+    temp := A_DetectHiddenWindows
+    DetectHiddenWindows 1
+    res := SendMessage(0x283, 0x005, 0x000, , "ahk_id " IMEWnd)
+    if (temp != A_DetectHiddenWindows) 
+        DetectHiddenWindows(temp)
+    return res
 }
 
-Send_ImeControl(DefaultIMEWnd, wParam, lParam)
-{
-	DetectSave := A_DetectHiddenWindows
-	DetectHiddenWindows, ON
-	SendMessage 0x283, wParam, lParam, , ahk_id %DefaultIMEWnd%
-	if (DetectSave <> A_DetectHiddenWindows)
-		DetectHiddenWindows, %DetectSave%
-	return ErrorLevel
-}
 
-ImmGetDefaultIMEWnd(hWnd)
-{
-	return DllCall("imm32\ImmGetDefaultIMEWnd", Uint, hWnd, Uint)
-}
-
-^+q::
-Reload
-ret := IME_CHECK()
-MsgBox %ret%
-return
-
+MsgBox(IMECheckHangul())

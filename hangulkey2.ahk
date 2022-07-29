@@ -33,6 +33,11 @@ IMECheckHangul()
 #!r::Send "#S"
 ^+q::Reload
 
+#h::
+{
+	MsgBox "Win + H" 
+}
+
 #!Space::
 {
 	Reload
@@ -56,39 +61,41 @@ $+F1::MsgBox(IMECheckHangul())
 :*:[mfn]::[mfn][/mfn]{left 6}
 :*:[katex]::[katex][/katex]{left 8}
 :*:\*::{SC1F2}a{SC1F1}8a{SC1F1}7{left}{SC1F2}
-::\d1::{SC1F2}d{SC1F1}{PgDn 2}9{SC1F2}
-::\d2::{SC1F2}d{SC1F1}{PgDn 3}1{SC1F2}
-::\d3::{SC1F2}d{SC1F1}{PgDn 3}2{SC1F2}
-::\d4::{SC1F2}d{SC1F1}{PgDn 3}3{SC1F2}
-::\d5::{SC1F2}d{SC1F1}{PgDn 3}4{SC1F2}
-::\d6::{SC1F2}d{SC1F1}{PgDn 3}5{SC1F2}
-::\d7::{SC1F2}d{SC1F1}{PgDn 3}6{SC1F2}
-::\d8::{SC1F2}d{SC1F1}{PgDn 3}7{SC1F2}
-::\d9::{SC1F2}d{SC1F1}{PgDn 3}8{SC1F2}
-::\d10::{SC1F2}d{SC1F1}{PgDn 3}9{SC1F2}
-::\d11::{SC1F2}d{SC1F1}{PgDn 4}1{SC1F2}
-::\d12::{SC1F2}d{SC1F1}{PgDn 4}2{SC1F2}
-::\d13::{SC1F2}d{SC1F1}{PgDn 4}3{SC1F2}
-::\d14::{SC1F2}d{SC1F1}{PgDn 4}4{SC1F2}
-::\d15::{SC1F2}d{SC1F1}{PgDn 4}5{SC1F2}
+:o:\d1::{SC1F2}d{SC1F1}{PgDn 2}9{SC1F2}
+:o:\d2::{SC1F2}d{SC1F1}{PgDn 3}1{SC1F2}
+:o:\d3::{SC1F2}d{SC1F1}{PgDn 3}2{SC1F2}
+:o:\d4::{SC1F2}d{SC1F1}{PgDn 3}3{SC1F2}
+:o:\d5::{SC1F2}d{SC1F1}{PgDn 3}4{SC1F2}
+:o:\d6::{SC1F2}d{SC1F1}{PgDn 3}5{SC1F2}
+:o:\d7::{SC1F2}d{SC1F1}{PgDn 3}6{SC1F2}
+:o:\d8::{SC1F2}d{SC1F1}{PgDn 3}7{SC1F2}
+:o:\d9::{SC1F2}d{SC1F1}{PgDn 3}8{SC1F2}
+:o:\d10::{SC1F2}d{SC1F1}{PgDn 3}9{SC1F2}
+:o:\d11::{SC1F2}d{SC1F1}{PgDn 4}1{SC1F2}
+:o:\d12::{SC1F2}d{SC1F1}{PgDn 4}2{SC1F2}
+:o:\d13::{SC1F2}d{SC1F1}{PgDn 4}3{SC1F2}
+:o:\d14::{SC1F2}d{SC1F1}{PgDn 4}4{SC1F2}
+:o:\d15::{SC1F2}d{SC1F1}{PgDn 4}5{SC1F2}
+:?o:\r.::{SC1F2}r{SC1F1}{PgDn}8{SC1F2}
+
 #HotIf (IMECheckHangul() != 0)
 :*:\*::a{SC1F1}8a{SC1F1}7{left}
-::\d1::d{SC1F1}{PgDn 2}9
-::\d2::d{SC1F1}{PgDn 3}1 ; ②
-::\d3::d{SC1F1}{PgDn 3}2
-::\d4::d{SC1F1}{PgDn 3}3
-::\d5::d{SC1F1}{PgDn 3}4
-::\d6::d{SC1F1}{PgDn 3}5
-::\d7::d{SC1F1}{PgDn 3}6
-::\d8::d{SC1F1}{PgDn 3}7
-::\d9::d{SC1F1}{PgDn 3}8
-::\d10::d{SC1F1}{PgDn 3}9
-::\d11::d{SC1F1}{PgDn 4}1
-::\d12::d{SC1F1}{PgDn 4}2
-::\d13::d{SC1F1}{PgDn 4}3
-::\d14::d{SC1F1}{PgDn 4}4
-::\d15::d{SC1F1}{PgDn 4}5
-
+:o:\d1::d{SC1F1}{PgDn 2}9
+:o:\d2::d{SC1F1}{PgDn 3}1 ; ②
+:o:\d3::d{SC1F1}{PgDn 3}2
+:o:\d4::d{SC1F1}{PgDn 3}3
+:o:\d5::d{SC1F1}{PgDn 3}4
+:o:\d6::d{SC1F1}{PgDn 3}5
+:o:\d7::d{SC1F1}{PgDn 3}6
+:o:\d8::d{SC1F1}{PgDn 3}7
+:o:\d9::d{SC1F1}{PgDn 3}8
+:o:\d10::d{SC1F1}{PgDn 3}9
+:o:\d11::d{SC1F1}{PgDn 4}1
+:o:\d12::d{SC1F1}{PgDn 4}2
+:o:\d13::d{SC1F1}{PgDn 4}3
+:o:\d14::d{SC1F1}{PgDn 4}4
+:o:\d15::d{SC1F1}{PgDn 4}5
+:o?:\r.::r{SC1F1}{PgDn}8
 #HotIf
 :*:\8)::(headphones)
 ^F10::ExitApp
@@ -99,7 +106,7 @@ $+F1::MsgBox(IMECheckHangul())
 ; MacOS 처럼 CapsLock을 누르고 있는 것으로 활성화할 수 있다.
 ; 참고로 중첩된 핫키를 바로 함수로 정의하여 작동하게 할 수 있다.
 $F2::
-$SC1F2::
+;$SC1F2::
     HoldToCapsLock(hk)
     {
 		theKey := SubStr(hk, 2)
