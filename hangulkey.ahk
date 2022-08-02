@@ -113,10 +113,6 @@ Return
 
 #h::Send {Win}
 
-$+F1::
-MsgBox % IMECheckHangul()
-Return
-
 +F12::Send #.
 
 OnExit("ExitFunc")
