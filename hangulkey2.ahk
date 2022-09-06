@@ -128,3 +128,30 @@ ExitFunc(ExitReason, ExitCode)
     DllCall("FreeLibrary", "Ptr", immModule)
 }
 OnExit(ExitFunc)
+
+
+#HotIf WinActive("ahk_exe explorer.exe")
+#y::
+  ToggleHiddenExt(hk)
+  {
+    RootKey := "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+    KeyName := "HideFileExt"
+    value := RegRead(RootKey, KeyName)
+    newValue := value ? 0 : 1
+    RegWrite(newValue, "REG_DWORD", RootKey, KeyName)
+    Send("{F5}")
+
+  }
+#t::
+  ToggleHiddenFile(hk)
+  {
+    RootKey := "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+    KeyName := "Hidden"
+    value := RegRead(RootKey, KeyName)
+    newValue := (value == 2) ? 1 : 2
+    RegWrite(newValue, "REG_DWORD", RootKey, KeyName)
+    Send("{F5}")
+  }
+#HotIf
+
+  

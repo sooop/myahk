@@ -95,8 +95,8 @@ $F2::
         KeyWait %theKey%, "T0.3"
         WasLate := (ErrorLevel <> 0)
         if (!WasLate)
-        { 
-            Send {%theKey%} 
+        {
+            Send {%theKey%}
         }
         else
         {
@@ -112,7 +112,6 @@ Return
 
 
 #h::Send {Win}
-
 +F12::Send #.
 
 OnExit("ExitFunc")
@@ -121,5 +120,3 @@ ExitFunc(ExitReason, ExitCode)
 {
 	DllCall("FreeLibrary", "Ptr", hModule)
 }
-
-
