@@ -35,7 +35,7 @@ IMECheckHangul()
 
 #h::
 {
-	MsgBox "Win + H" 
+	MsgBox "Win + H"
 }
 
 #!Space::
@@ -153,5 +153,3 @@ OnExit(ExitFunc)
     Send("{F5}")
   }
 #HotIf
-
-  
