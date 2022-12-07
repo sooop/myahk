@@ -25,18 +25,14 @@ $F2::
 	{
 		theKey := SubStr(hk, 2)
 		try {
-				if (KeyWait(theKey, "T0.3") == 1)
-				{
-					Send("{" theKey "}")
-				} else if (A_TimeSincePriorHotkey > 290)
-				{
-					SetCapsLockState(!GetKeyState("CapsLock", "T"))
-				}
+			if (KeyWait(theKey, "T0.3") == 1) {
+				Send("{" theKey "}")
+		;	} else if (A_TimeSincePriorHotkey > 290) {
+			} else {
+				SetCapsLockState(!GetKeyState("CapsLock", "T"))
+			}
 		} catch Error as err {
 			send("{" theKey "}")
-		}
-		if IMECheckHangul() {
-			Send("{SC1F2}")
 		}
 	}
 
