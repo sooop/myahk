@@ -8,6 +8,8 @@
         Send("{AppsKey}")
     }
 
+>^NumpadDot::
+^NumpadDot::Send(",")
 !NumpadEnter::
     {
         TN := Tooltip("numpad enter")
@@ -15,12 +17,14 @@
         Tooltip
     }
 
-^0::Send("A")
 ^NumpadIns::
     {
         Send("gjtndkql@myr13{Enter}")
     }
-^NumpadSub::Run("calc.exe")
++NumLock::Send("{Escape}")
+^NumpadSub::Send("{BackSpace}")
+^NumpadDiv::Send("{Tab}")
+^NumpadMult::Send("+{Tab}")
 ^Numpad7::Send("xd01@qoo10.com")
 ^Numpad8::Send("djehqlzb10!{Enter}")
 
@@ -47,9 +51,6 @@
 ^Numpad2::
 ^Numpad3::
 ^Numpad0::
-^NumpadDot::
-^NumpadDiv::
-^NumpadMult::
 ^NumpadAdd::
 	CROADNoKey(hk)
 	{
