@@ -1,3 +1,4 @@
+
 +SC1F2::
 {
 	SetCapsLockState(!GetKeyState("CapsLock", "T"))
@@ -8,16 +9,7 @@
         Send("{AppsKey}")
     }
 
->^NumpadDot::
 ^NumpadDot::Send(",")
-$NumpadDot::
-	{
-		if (GetKeyState("Esc", "P")) {
-			Send(",")
-		} else {
-			Send("{NumpadDot}")
-		}
-	}
 !NumpadEnter::
     {
 		R := GetKeyState("Esc", "P")
@@ -29,11 +21,20 @@ $NumpadDot::
         Send("gjtndkql@myr13{Enter}")
     }
 NumpadEnter & NumpadDot::Send(",")
+NumpadEnter & Numpad1::Send("^c")
+NumpadEnter & Numpad2::Send("^v")
+NumpadEnter & Numpad0::Send("^z")
+NumpadEnter & Numpad4::Send("^a")
+NumpadEnter & NumpadSub::Send("{BS}")
+NumpadAdd & NumpadSub::Send("{BS}")
+NumpadAdd & Numpad0::Send(",")
+NumpadAdd & Numpad7::Send("(")
+NumpadAdd & Numpad8::Send(")")
 $NumpadEnter::Send("{NumpadEnter}")
+$NumpadAdd::Send("{NumpadAdd}")
 ;Numpad0 & NumpadDot::Send(",")
-;Numpad0 & Numpad1::Send("^z")
-;Numpad0 & Numpad2::Send("^c")
-;Numpad0 & Numpad3::Send("^v")
+;Numpad0 & Numpad1::Send("^c")
+;Numpad0 & Numpad2::Send("^v")
 ;$Numpad0::Send("{Numpad0}")
 +NumLock::Esc
 ^NumpadDel::Send(",")
