@@ -21,7 +21,13 @@
     {
         Send("gjtndkql@myr13{Enter}")
     }
-+NumLock::Send("{Escape}")
+
+Numpad0 & NumpadDot::Send(",")
+Numpad0 & Numpad1::Send("^z")
+Numpad0 & Numpad2::Send("^c")
+Numpad0 & Numpad3::Send("^v")
+$Numpad0::Send("{Numpad0}")
++NumLock::Esc
 ^NumpadSub::Send("{BackSpace}")
 ^NumpadDiv::Send("{Tab}")
 ^NumpadMult::Send("+{Tab}")

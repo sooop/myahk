@@ -63,3 +63,14 @@
 #HotIf
 
 :*:\8)::(headphones)
+$SC1F2::Send("{SC1F2}")
+SC1F2 & a::Send("{Left}")
+SC1F2 & s::Send("{Down}")
+SC1F2 & d::Send("{Right}")
+SC1F2 & w::Send("{Up}")
+SC1F2 & h::Send("{Left}")
+SC1F2 & j::Send("{Down}")
+SC1F2 & l::Send("{Right}")
+SC1F2 & k::Send("{Up}")
+
+CapsLock & a::Send("{Left}")
