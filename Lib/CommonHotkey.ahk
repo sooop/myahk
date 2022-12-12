@@ -72,5 +72,3 @@ SC1F2 & h::Send("{Left}")
 SC1F2 & j::Send("{Down}")
 SC1F2 & l::Send("{Right}")
 SC1F2 & k::Send("{Up}")
-
-CapsLock & a::Send("{Left}")

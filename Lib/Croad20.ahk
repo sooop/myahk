@@ -10,24 +10,33 @@
 
 >^NumpadDot::
 ^NumpadDot::Send(",")
+$NumpadDot::
+	{
+		if (GetKeyState("Esc", "P")) {
+			Send(",")
+		} else {
+			Send("{NumpadDot}")
+		}
+	}
 !NumpadEnter::
     {
-        TN := Tooltip("numpad enter")
-        Sleep 1000
-        Tooltip
+		R := GetKeyState("Esc", "P")
+		TLog(R)
     }
 
 ^NumpadIns::
     {
         Send("gjtndkql@myr13{Enter}")
     }
-
-Numpad0 & NumpadDot::Send(",")
-Numpad0 & Numpad1::Send("^z")
-Numpad0 & Numpad2::Send("^c")
-Numpad0 & Numpad3::Send("^v")
-$Numpad0::Send("{Numpad0}")
+NumpadEnter & NumpadDot::Send(",")
+$NumpadEnter::Send("{NumpadEnter}")
+;Numpad0 & NumpadDot::Send(",")
+;Numpad0 & Numpad1::Send("^z")
+;Numpad0 & Numpad2::Send("^c")
+;Numpad0 & Numpad3::Send("^v")
+;$Numpad0::Send("{Numpad0}")
 +NumLock::Esc
+^NumpadDel::Send(",")
 ^NumpadSub::Send("{BackSpace}")
 ^NumpadDiv::Send("{Tab}")
 ^NumpadMult::Send("+{Tab}")

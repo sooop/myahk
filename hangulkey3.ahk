@@ -40,6 +40,5 @@ OnExit(ExitFunc)
 		TLog("Reload")
 		Reload()
 	}
-{
 
 TLog("Loaded.")
