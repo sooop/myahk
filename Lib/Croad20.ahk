@@ -1,8 +1,8 @@
 
-+SC1F2::
-{
-	SetCapsLockState(!GetKeyState("CapsLock", "T"))
-}
+;+SC1F2::
+;{
+;	SetCapsLockState(!GetKeyState("CapsLock", "T"))
+;}
 +CapsLock::
 ^CapsLock::
     {
