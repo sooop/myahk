@@ -37,7 +37,7 @@ OnExit(ExitFunc)
 ^+q::
 ^NumpadEnter::
 	{
-		TLog("Reload")
+		TLog(IMECheckHangul() ? "Hangul" : "English")
 		Reload()
 	}
 
