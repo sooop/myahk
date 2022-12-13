@@ -12,8 +12,7 @@
 ^NumpadDot::Send(",")
 !NumpadEnter::
     {
-		R := GetKeyState("Esc", "P")
-		TLog(R)
+		TLog(IMECheckHangul() ? "Hangul" : "English")
     }
 
 ^NumpadIns::
