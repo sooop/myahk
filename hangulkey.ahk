@@ -35,11 +35,14 @@ OnExit(ExitFunc)
 
 #h::TLog("Win + H is not allowed befause it occurs IME clitch.")
 ^+q::
-^NumpadEnter::
 	{
-		TLog(IMECheckHangul() ? "Hangul" : "English")
+		TLog("Reload...")
 		Reload()
 	}
+^NumpadEnter::
+{
+	TLog(IMECheckHangul() ? "Hangul" : "English")
+}
 
 
 Browser_Back::
