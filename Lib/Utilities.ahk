@@ -37,13 +37,15 @@ $Esc::
 		 Send("{F5}")
 	}
 #HotIf
+;$SC138::
 $F2::
 	HoldToCapsLock(hk)
 	{
+		threash := 0.27
 		theKey := SubStr(hk, 2)
-		res := KeyWait(theKey, "T0.3")
+		res := KeyWait(theKey, "T" threash)
 		if res == 0 {
-			if A_TimeSinceThisHotKey > 0.3  {
+			if A_TimeSinceThisHotKey > threash  {
 				SetCapsLockState(!GetKeyState("CapsLock", "T"))
 				return
 			}
