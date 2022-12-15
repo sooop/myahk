@@ -1,3 +1,20 @@
+GroupAdd("GRP_BROWSER", "ahk_exe firefox.exe")
+GroupAdd("GRP_BROWSER", "ahk_exe chrome.exe")
+GroupAdd("GRP_BROWSER", "ahk_exe edge.exe")
+GroupAdd("GRP_BROWSER", "ahk_exe opera.exe")
+GroupAdd("GRP_BROWSER", "ahk_exe notepad.exe")
+
+#HotIf WinActive("ahk_group GRP_BROWSER")
+$Esc::
+{
+	KeyWait("Esc")
+	if (KeyWait("Esc", "DT0.2") == 1) {
+		Send("^{Home}")
+	} else {
+		Send("{Esc}")
+	}
+}
+
 #HotIf WinActive("ahk_exe explorer.exe")
 #t::
 	ToggleHiddenExt(hk)
@@ -24,16 +41,15 @@ $F2::
 	HoldToCapsLock(hk)
 	{
 		theKey := SubStr(hk, 2)
-		try {
-			if (KeyWait(theKey, "T0.3") == 1) {
-				Send("{" theKey "}")
-		;	} else if (A_TimeSincePriorHotkey > 290) {
-			} else {
+		res := KeyWait(theKey, "T0.3")
+		if res == 0 {
+			if A_TimeSinceThisHotKey > 0.3  {
 				SetCapsLockState(!GetKeyState("CapsLock", "T"))
+				return
 			}
-		} catch Error as err {
-			send("{" theKey "}")
 		}
+
+		Send("{" theKey "}")
 	}
 
 TLog(msg)
