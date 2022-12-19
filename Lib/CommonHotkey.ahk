@@ -13,6 +13,15 @@
 ; - $ : use when Send same key in hotkey action
 ; - ~ : do not block hotkey's original behavior
 
+; SC1F2 : Hangul
+; SC1F1 : Hanja
+
+; HotString Options
+; * : Ending character not required.
+; ? : Triggered even if it is inside other word.
+; B0: No auto-backspace
+; Kn: Key delay
+; o : omit ending character
 
 #HotIf (IMECheckHangul() == 0)
 :*:optoin::option
