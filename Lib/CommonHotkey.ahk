@@ -69,8 +69,10 @@
 :o:\d14::d{SC1F1}{PgDn 4}4
 :o:\d15::d{SC1F1}{PgDn 4}5
 :o?:\r.::r{SC1F1}{PgDn}8
-#HotIf
 
+#HotIf GetKeyState("ScrollLock", "T") == 1
++Esc::Send("``")
+#HotIf
 :*:\8)::(headphones)
 $SC1F2::Send("{SC1F2}")
 SC1F2 & a::Send("^a")
@@ -83,3 +85,8 @@ SC1F2 & h::Send("{Left}")
 SC1F2 & j::Send("{Down}")
 SC1F2 & l::Send("{Right}")
 SC1F2 & k::Send("{Up}")
+
+SC1F2 & u::Send("{PgUp}")
+SC1F2 & i::Send("{PgDn}")
+SC1F2 & y::Send("{Home}")
+SC1F2 & o::Send("{End}")

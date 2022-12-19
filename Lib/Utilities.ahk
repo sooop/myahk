@@ -42,16 +42,18 @@ $F2::
 	HoldToCapsLock(hk)
 	{
 		threash := 0.27
-		theKey := SubStr(hk, 2)
-		res := KeyWait(theKey, "T" threash)
-		if res == 0 {
+		theKey := "F2"
+		if (KeyWait(theKey, "T" threash) == 0) {
 			if A_TimeSinceThisHotKey > threash  {
 				SetCapsLockState(!GetKeyState("CapsLock", "T"))
 				return
 			}
 		}
-
-		Send("{" theKey "}")
+		if (KeyWait(theKey, "DT0.2") == 1) {
+				SetCapsLockState(!GetKeyState("CapsLock", "T"))
+				return
+		}
+		Send("{F2}")
 	}
 
 TLog(msg)

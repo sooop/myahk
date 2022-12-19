@@ -66,3 +66,23 @@ Launch_App2::
 		TLog("> " hk)
 	}
 TLog("Loaded.")
+
+$F1::
+{
+	KeyWait("F1")
+	if KeyWait("F1", "DT0.2") == 1 {
+		SetNumLockState(!GetKeyState("NumLock", "T"))
+	} else {
+		Send("{F1}")
+	}
+}
+
+$F3::
+{
+	KeyWait("F3")
+	if KeyWait("F3", "DT0.2") == 1 {
+		SetScrollLockState(!GetKeyState("ScrollLock", "T"))
+	} else {
+		Send("{F3}")
+	}
+}
