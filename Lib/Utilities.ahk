@@ -4,16 +4,46 @@ GroupAdd("GRP_BROWSER", "ahk_exe edge.exe")
 GroupAdd("GRP_BROWSER", "ahk_exe opera.exe")
 GroupAdd("GRP_BROWSER", "ahk_exe notepad.exe")
 
+GroupAdd("GRP_WORDP", "ahk_exe word.exe")
+GroupAdd("GRP_WORDP", "ahk_exe notepad.exe")
+GroupAdd("GRP_WORDP", "ahk_exe wordpad.exe")
+
+#HotIf GetKeyState("ScrollLock", "T") ==  1
+$Space::
+{
+	if WinActive("ahk_group GRP_WORDP") and
+		A_PriorHotkey == ThisHotkey and
+		A_TimeSincePriorHotkey < 200 {
+		Send("{BS}{Enter}")
+	} else {
+		Send("{Space}")
+	}
+}
+
+^+LButton::
+{
+	Send("{Shift DownR}{Shift Up}{LButton 3}^c")
+}
+
+
+^+RButton::
+{
+	Send("^a^v")
+}
+
 #HotIf WinActive("ahk_group GRP_BROWSER")
 $Esc::
 {
 	KeyWait("Esc")
-	if (KeyWait("Esc", "DT0.2") == 1) {
+	if (GetKeyState("ScrollLock", "T") == 1 and
+		KeyWait("Esc", "DT0.2") == 1) {
 		Send("^{Home}")
 	} else {
 		Send("{Esc}")
 	}
 }
+
+
 
 #HotIf WinActive("ahk_exe explorer.exe")
 #t::
@@ -38,23 +68,49 @@ $Esc::
 	}
 #HotIf
 ;$SC138::
+$F1::
+{
+	KeyWait("F1")
+	if(KeyWait("F1", "DT0.3") == 1) {
+		SetNumLockState(!GetKeyState("NumLock", "T"))
+	} else {
+		Send("{F1}")
+	}
+}
+
 $F2::
-	HoldToCapsLock(hk)
-	{
-		threash := 0.27
-		theKey := "F2"
-		if (KeyWait(theKey, "T" threash) == 0) {
-			if A_TimeSinceThisHotKey > threash  {
-				SetCapsLockState(!GetKeyState("CapsLock", "T"))
-				return
-			}
-		}
-		if (KeyWait(theKey, "DT0.2") == 1) {
-				SetCapsLockState(!GetKeyState("CapsLock", "T"))
-				return
-		}
+{
+	KeyWait("F2")
+	if(KeyWait("F2", "DT0.3") == 1) {
+		SetCapsLockState(!GetKeyState("CapsLock", "T"))
+	} else {
 		Send("{F2}")
 	}
+}
+
+$F3::
+{
+	KeyWait("F3")
+	if(KeyWait("F3", "DT0.3") == 1) {
+		SetScrollLockState(!GetKeyState("ScrollLock", "T"))
+	} else {
+		Send("{F3}")
+	}
+}
+
+$SC11D::
+{
+	if (KeyWait("SC11D", "T0.3") == 1) {
+		Send("{SC11D}")
+	} else {
+		SetCapsLockState(!GetKeyState("CapsLock", "T"))
+	}
+}
+
+>+Esc::Send("``")
+
+
+
 
 TLog(msg)
 {
