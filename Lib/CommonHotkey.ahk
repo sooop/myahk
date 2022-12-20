@@ -49,7 +49,7 @@
 :o:\d13::{SC1F2}d{SC1F1}{PgDn 4}3{SC1F2}
 :o:\d14::{SC1F2}d{SC1F1}{PgDn 4}4{SC1F2}
 :o:\d15::{SC1F2}d{SC1F1}{PgDn 4}5{SC1F2}
-:?o:\r.::{SC1F2}r{SC1F1}{PgDn}8{SC1F2}
+:?*:\r.::{SC1F2}r{SC1F1}{PgDn}8{SC1F2}
 
 #HotIf (IMECheckHangul() != 0)
 :*:\*::a{SC1F1}8a{SC1F1}7{left}
@@ -68,7 +68,7 @@
 :o:\d13::d{SC1F1}{PgDn 4}3
 :o:\d14::d{SC1F1}{PgDn 4}4
 :o:\d15::d{SC1F1}{PgDn 4}5
-:o?:\r.::r{SC1F1}{PgDn}8
+:?*:\r.::{Space}r{SC1F1}{PgDn}8{Left}{BS}{Right}
 
 #HotIf GetKeyState("ScrollLock", "T") == 1
 +Esc::Send("``")
