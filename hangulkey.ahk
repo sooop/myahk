@@ -63,6 +63,6 @@ Launch_Media::
 Launch_App1::
 Launch_App2::
 	UXMeidaKey(hk) {
-		TLog("> " hk)
+		TLog("Disabled> " hk)
 	}
 TLog("Loaded.")

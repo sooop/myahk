@@ -20,6 +20,11 @@ $Space::
 	}
 }
 
+<+Esc::Send("``")
+
+
+#HotIf GetKeyState("NumLock", "T") == 0
+
 ^+LButton::
 {
 	Send("{Shift DownR}{Shift Up}{LButton 3}^c")
@@ -42,8 +47,6 @@ $Esc::
 		Send("{Esc}")
 	}
 }
-
-
 
 #HotIf WinActive("ahk_exe explorer.exe")
 #t::
@@ -68,6 +71,16 @@ $Esc::
 	}
 #HotIf
 ;$SC138::
+$SC11D:: {
+	if (KeyWait("SC11D", "T0.3") == 1) {
+		Send("{SC11D}")
+	} else {
+		SetCapsLockState(!GetKeyState("CapsLock", "T"))
+	}
+}
+
+>+Esc::Send("~")
+
 $F1::
 {
 	KeyWait("F1")
@@ -98,17 +111,35 @@ $F3::
 	}
 }
 
-$SC11D::
+$F10::
 {
-	if (KeyWait("SC11D", "T0.3") == 1) {
-		Send("{SC11D}")
+	KeyWait("F10")
+	if(KeyWait("F10", "DT0.3") == 1) {
+		Send("{Volume_Down}")
 	} else {
-		SetCapsLockState(!GetKeyState("CapsLock", "T"))
+		Send("{F11}")
 	}
 }
 
->+Esc::Send("``")
+$F11::
+{
+	KeyWait("F11")
+	if(KeyWait("F11", "DT0.3") == 1) {
+		Send("{Volume_Up}")
+	} else {
+		Send("{F11}")
+	}
+}
 
+$F12::
+{
+	KeyWait("F12")
+	if(KeyWait("F12", "DT0.3") == 1) {
+		Send("${Volume_Mute}")
+	} else {
+		Send("{F12}")
+	}
+}
 
 
 
