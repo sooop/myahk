@@ -8,8 +8,7 @@ IMECheckHangul()
     temp := A_DetectHiddenWindows
     DetectHiddenWindows 1
     res := SendMessage(0x283, 0x005, 0x000, , "ahk_id " IMEWnd)
-    if (temp != A_DetectHiddenWindows) 
-        DetectHiddenWindows(temp)
+	DetectHiddenWindows(temp)
     return res
 }
 
