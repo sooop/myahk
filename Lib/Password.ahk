@@ -14,6 +14,6 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 	EnterPassword(hk)
 	{
 		Send("^a")
-		Send("gjtndkql@myr13{Enter}")
+		Send("gjtndkql@myR12{Enter}")
 	}
 #HotIf
