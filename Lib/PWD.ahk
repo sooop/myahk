@@ -1,4 +1,5 @@
 GroupAdd("GRP_PWD", "ahk_exe mstsc.exe")
+GroupAdd("GRP_PWD", "ahk_exe explorer.exe")
 GroupAdd("GRP_PWD", "ahk_exe nsload.exe")
 GroupAdd("GRP_PWD", "ahk_exe firefox.exe")
 GroupAdd("GRP_PWD", "ahk_exe chrome.exe")
@@ -14,6 +15,6 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 	EnterPassword(hk)
 	{
 		Send("^a")
-		Send("gjtndkql@myr13{Enter}")
+		Send("gjtndkql@myR12{Enter}")
 	}
 #HotIf
