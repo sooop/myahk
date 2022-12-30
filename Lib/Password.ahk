@@ -1,3 +1,4 @@
+GroupAdd("GRP_PWD", "ahk_exe notepad.exe")
 GroupAdd("GRP_PWD", "ahk_exe mstsc.exe")
 GroupAdd("GRP_PWD", "ahk_exe nsload.exe")
 GroupAdd("GRP_PWD", "ahk_exe firefox.exe")
