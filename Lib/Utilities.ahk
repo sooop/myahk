@@ -40,8 +40,7 @@ $Space::
 $Esc::
 {
 	KeyWait("Esc")
-	if (GetKeyState("ScrollLock", "T") == 1 and
-		KeyWait("Esc", "DT0.2") == 1) {
+	if (KeyWait("Esc", "DT0.2") == 1) {
 		Send("^{Home}")
 	} else {
 		Send("{Esc}")
