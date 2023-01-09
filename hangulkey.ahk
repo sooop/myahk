@@ -39,10 +39,6 @@ OnExit(ExitFunc)
 		TLog("Reload...")
 		Reload()
 	}
-^NumpadEnter::
-{
-	TLog(IMECheckHangul() ? "Hangul" : "English")
-}
 
 
 Browser_Back::
@@ -51,9 +47,9 @@ Browser_Refresh::
 Browser_Search::
 Browser_Favorites::
 Browser_Home::
-Volume_Mute::
-Volume_Down::
-Volume_Up::
+;Volume_Mute::
+;Volume_Down::
+;Volume_Up::
 Media_Next::
 Media_Prev::
 Media_Stop::
