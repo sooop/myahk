@@ -33,60 +33,62 @@
 :*:\mfn::[mfn][/mfn]{left 6}
 :*:[mfn]::[mfn][/mfn]{left 6}
 :*:[katex]::[katex][/katex]{left 8}
-:*:\*::{SC1F2}a{SC1F1}8a{SC1F1}7{left}{SC1F2}
-:o:\d1::{SC1F2}d{SC1F1}{PgDn 2}9{SC1F2}
-:o:\d2::{SC1F2}d{SC1F1}{PgDn 3}1{SC1F2}
-:o:\d3::{SC1F2}d{SC1F1}{PgDn 3}2{SC1F2}
-:o:\d4::{SC1F2}d{SC1F1}{PgDn 3}3{SC1F2}
-:o:\d5::{SC1F2}d{SC1F1}{PgDn 3}4{SC1F2}
-:o:\d6::{SC1F2}d{SC1F1}{PgDn 3}5{SC1F2}
-:o:\d7::{SC1F2}d{SC1F1}{PgDn 3}6{SC1F2}
-:o:\d8::{SC1F2}d{SC1F1}{PgDn 3}7{SC1F2}
-:o:\d9::{SC1F2}d{SC1F1}{PgDn 3}8{SC1F2}
-:o:\d10::{SC1F2}d{SC1F1}{PgDn 3}9{SC1F2}
-:o:\d11::{SC1F2}d{SC1F1}{PgDn 4}1{SC1F2}
-:o:\d12::{SC1F2}d{SC1F1}{PgDn 4}2{SC1F2}
-:o:\d13::{SC1F2}d{SC1F1}{PgDn 4}3{SC1F2}
-:o:\d14::{SC1F2}d{SC1F1}{PgDn 4}4{SC1F2}
-:o:\d15::{SC1F2}d{SC1F1}{PgDn 4}5{SC1F2}
-:?*:\r.::{SC1F2}r{SC1F1}{PgDn}8{SC1F2}
-
-#HotIf (IMECheckHangul() != 0)
-:*:\*::a{SC1F1}8a{SC1F1}7{left}
-:o:\d1::d{SC1F1}{PgDn 2}9
-:o:\d2::d{SC1F1}{PgDn 3}1 ; ??
-:o:\d3::d{SC1F1}{PgDn 3}2
-:o:\d4::d{SC1F1}{PgDn 3}3
-:o:\d5::d{SC1F1}{PgDn 3}4
-:o:\d6::d{SC1F1}{PgDn 3}5
-:o:\d7::d{SC1F1}{PgDn 3}6
-:o:\d8::d{SC1F1}{PgDn 3}7
-:o:\d9::d{SC1F1}{PgDn 3}8
-:o:\d10::d{SC1F1}{PgDn 3}9
-:o:\d11::d{SC1F1}{PgDn 4}1
-:o:\d12::d{SC1F1}{PgDn 4}2
-:o:\d13::d{SC1F1}{PgDn 4}3
-:o:\d14::d{SC1F1}{PgDn 4}4
-:o:\d15::d{SC1F1}{PgDn 4}5
-:?*:\r.::{Space}r{SC1F1}{PgDn}8{Left}{BS}{Right}
 
 #HotIf GetKeyState("ScrollLock", "T") == 1
 +Esc::Send("``")
 #HotIf
 :*:\8)::(headphones)
+:*:\*::
+{
+	Send("{alt down}{numpad4}{numpad1}{numpad4}{numpad3}{numpad4}{alt up}")
+	Send("{alt down}{numpad4}{numpad1}{numpad4}{numpad3}{numpad3}{alt up}{left}")
+}
+:o:\d1::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad3}{Numpad9}{alt up}")
+}
+:o:\d2::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad0}{alt up}")
+}
+:o:\d3::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad1}{alt up}")
+}
+:o:\d4::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad2}{alt up}")
+}
+:o:\d5::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad3}{alt up}")
+}
+:o:\d6::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad4}{alt up}")
+}
+:o:\d7::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad5}{alt up}")
+}
+:o:\d8::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad6}{alt up}")
+}
+:o:\d9::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad7}{alt up}")
+}
+:o:\d10::
+{
+	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad8}{alt up}")
+}
+:?*:\r.::
+{
+	Send("{alt down}{Numpad1}{Numpad8}{Numpad3}{alt up}")
+}
 $SC1F2::Send("{SC1F2}")
-SC1F2 & a::Send("^a")
-SC1F2 & s::Send("^s")
-SC1F2 & z::Send("^z")
-SC1F2 & x::Send("^x")
-SC1F2 & c::Send("^c")
-SC1F2 & v::Send("^v")
 SC1F2 & h::Send("{Left}")
 SC1F2 & j::Send("{Down}")
 SC1F2 & l::Send("{Right}")
 SC1F2 & k::Send("{Up}")
-
-SC1F2 & u::Send("{PgUp}")
-SC1F2 & i::Send("{PgDn}")
-SC1F2 & y::Send("{Home}")
-SC1F2 & o::Send("{End}")
