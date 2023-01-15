@@ -70,6 +70,7 @@ $Esc::
 	}
 #HotIf
 ;$SC138::
+; SC11D = RCtrl
 $SC11D:: {
 	if (KeyWait("SC11D", "T0.3") == 1) {
 		Send("{SC11D}")
