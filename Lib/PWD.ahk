@@ -13,7 +13,6 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 #HotIf WinActive("ahk_group GRP_PWD")
 ^+BS::
 ^F12::
-^NumpadEnter::
 	EnterPassword(hk)
 	{
 		Send("^a")
@@ -21,7 +20,6 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 	}
 #HotIf WinActive("ahk_class CreativeCloudDesktopWindowClass")
 ^+BS::
-^NumPadEnter::
 {
 	Send("djehqlzb10!{Enter}")
 }
