@@ -64,7 +64,6 @@ $NumpadAdd::Send("{NumpadAdd}")
 !NumpadDot::
 !NumpadDiv::
 !NumpadMult::
-!NumpadAdd::
 	CROADNoKey(hk)
 	{
 		Tooltip("(" hk ") Not-assigned Numpad Hotkey")

@@ -23,6 +23,17 @@
 ; Kn: Key delay
 ; o : omit ending character
 
+DoAltCode(altcode)
+{
+	arr := StrSplit(altcode, "")
+	res := "{Alt Down}"
+	for a in arr {
+		res := res . "{NumPad" . a . "}"
+	}
+	res := res . "{Alt Up}"
+	Send(res)
+}
+
 #HotIf (IMECheckHangul() == 0)
 :*:optoin::option
 :*:ensuer::ensure
@@ -38,54 +49,17 @@
 +Esc::Send("``")
 #HotIf
 :*:\8)::(headphones)
-:*:\*::
+:o:\dt::
 {
-	Send("{alt down}{numpad4}{numpad1}{numpad4}{numpad3}{numpad4}{alt up}")
-	Send("{alt down}{numpad4}{numpad1}{numpad4}{numpad3}{numpad3}{alt up}{left}")
+	DoAltcode("0149")
 }
-:o:\d1::
+:o:\r.::
 {
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad3}{Numpad9}{alt up}")
+	DoAltcode("0183")
 }
-:o:\d2::
+:o:\dw::
 {
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad0}{alt up}")
-}
-:o:\d3::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad1}{alt up}")
-}
-:o:\d4::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad2}{alt up}")
-}
-:o:\d5::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad3}{alt up}")
-}
-:o:\d6::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad4}{alt up}")
-}
-:o:\d7::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad5}{alt up}")
-}
-:o:\d8::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad6}{alt up}")
-}
-:o:\d9::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad7}{alt up}")
-}
-:o:\d10::
-{
-	Send("{alt down}{Numpad4}{Numpad3}{Numpad2}{Numpad4}{Numpad8}{alt up}")
-}
-:?*:\r.::
-{
-	Send("{alt down}{Numpad1}{Numpad8}{Numpad3}{alt up}")
+	DoAltcode("8361")
 }
 $SC1F2::Send("{SC1F2}")
 SC1F2 & h::Send("{Left}")

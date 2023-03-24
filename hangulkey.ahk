@@ -50,10 +50,10 @@ Browser_Home::
 ;Volume_Mute::
 ;Volume_Down::
 ;Volume_Up::
-Media_Next::
-Media_Prev::
-Media_Stop::
-Media_Play_Pause::
+;Media_Next::
+;Media_Prev::
+;Media_Stop::
+;Media_Play_Pause::
 Launch_Mail::
 Launch_Media::
 Launch_App1::
