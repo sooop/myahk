@@ -18,9 +18,10 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 		Send("^a")
 		Send("dkapflzksh@myR12{Enter}")
 	}
-#HotIf WinActive("ahk_class CreativeCloudDesktopWindowClass")
+#HotIf WinActive("Adobe XD")
 ^+BS::
 {
-	Send("djehqlzb10!{Enter}")
+	Send("^a")
+	Send("djehqlzb10{!}{Enter}")
 }
 #HotIf
