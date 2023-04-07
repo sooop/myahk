@@ -7,7 +7,7 @@ GroupAdd("GRP_PWD", "ahk_exe msedge.exe")
 GroupAdd("GRP_PWD", "ahk_exe edge.exe")
 GroupAdd("GRP_PWD", "ahk_exe opera.exe")
 GroupAdd("GRP_PWD", "ahk_exe CredentialUIBroker.exe")
-GroupAdd("GRP_PWD", "ahk_exe Notepad.exe")
+; GroupAdd("GRP_PWD", "ahk_exe Notepad.exe")
 GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 
 #HotIf WinActive("ahk_group GRP_PWD")
@@ -22,6 +22,7 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 ^+BS::
 {
 	Send("^a")
-	Send("djehqlzb10{!}{Enter}")
+	Send("{text}djehqlzb10")
+	Send("{!}{Enter}")
 }
 #HotIf
