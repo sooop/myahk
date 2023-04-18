@@ -117,7 +117,7 @@ $F10::
 	if(KeyWait("F10", "DT0.3") == 1) {
 		Send("{Volume_Down}")
 	} else {
-		Send("{F11}")
+		Send("{F10}")
 	}
 }
 
