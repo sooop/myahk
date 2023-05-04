@@ -101,13 +101,13 @@ $F2::
 	}
 }
 
-$F3::
+$F4::
 {
-	KeyWait("F3")
-	if(KeyWait("F3", "DT0.3") == 1) {
+	KeyWait("F4")
+	if(KeyWait("F4", "DT0.3") == 1) {
 		SetScrollLockState(!GetKeyState("ScrollLock", "T"))
 	} else {
-		Send("{F3}")
+		Send("{F4}")
 	}
 }
 
