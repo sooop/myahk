@@ -12,6 +12,8 @@ GroupAdd("GRP_PWD", "ahk_class Credential Dialog Xaml Host")
 GroupAdd("GRP_VPN", "ahk_exe nsload.exe")
 GroupAdd("GRP_XD", "ahk_exe Creative Cloud.exe")
 GroupAdd("GRP_XD", "Adobe XD")
+GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
+
 #HotIf WinActive("ahk_group GRP_PWD")
 ^+BS::
 	EnterPassword(hk)
@@ -24,9 +26,16 @@ GroupAdd("GRP_XD", "Adobe XD")
 #HotIf WinActive("ahk_group GRP_XD")
 ^+BS::
 {
-<<<<<<< Updated upstream
 	Send("^a")
 	Send("{text}djehqlzb10")
+	Send("{!}{Enter}")
+}
+
+#HotIf WinActive("ahk_group GRP_TVW")
+{
+	Send("^a")AkRfp4#a8#FY!
+
+	Send("{text}zQaAkRfp4#a8#FY")
 	Send("{!}{Enter}")
 }
 
@@ -36,8 +45,5 @@ GroupAdd("GRP_XD", "Adobe XD")
 	Send("^a")
 	Send("{text}dkapflzksh@myR12")
 	Send("{tab}")
-=======
-	Send("djehqlzb10{!}{Enter}")
->>>>>>> Stashed changes
 }
 #HotIf
