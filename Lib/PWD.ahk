@@ -24,6 +24,7 @@ GroupAdd("GRP_XD", "Adobe XD")
 #HotIf WinActive("ahk_group GRP_XD")
 ^+BS::
 {
+<<<<<<< Updated upstream
 	Send("^a")
 	Send("{text}djehqlzb10")
 	Send("{!}{Enter}")
@@ -35,5 +36,8 @@ GroupAdd("GRP_XD", "Adobe XD")
 	Send("^a")
 	Send("{text}dkapflzksh@myR12")
 	Send("{tab}")
+=======
+	Send("djehqlzb10{!}{Enter}")
+>>>>>>> Stashed changes
 }
 #HotIf
