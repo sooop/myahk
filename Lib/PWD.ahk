@@ -32,6 +32,7 @@ GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
 }
 
 #HotIf WinActive("ahk_group GRP_TVW")
+^+BS::
 {
 	Send("^a")
 	Send("{text}zQaAkRfp4#a8#FY")
