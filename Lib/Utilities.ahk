@@ -135,7 +135,7 @@ $F12::
 {
 	KeyWait("F12")
 	if(KeyWait("F12", "DT0.3") == 1) {
-		Send("${Volume_Mute}")
+		Send("{Volume_Mute}")
 	} else {
 		Send("{F12}")
 	}
