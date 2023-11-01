@@ -2,7 +2,6 @@ GroupAdd("GRP_BROWSER", "ahk_exe firefox.exe")
 GroupAdd("GRP_BROWSER", "ahk_exe chrome.exe")
 GroupAdd("GRP_BROWSER", "ahk_exe edge.exe")
 GroupAdd("GRP_BROWSER", "ahk_exe opera.exe")
-GroupAdd("GRP_BROWSER", "ahk_exe notepad.exe")
 
 GroupAdd("GRP_WORDP", "ahk_exe word.exe")
 GroupAdd("GRP_WORDP", "ahk_exe notepad.exe")
@@ -111,6 +110,25 @@ $F4::
 	}
 }
 
+$F9::
+{
+	KeyWait("F9")
+	if(KeyWait("F9", "DT0.3") == 1) {
+		winname := "ahk_exe Spotify.exe"
+		DetectHiddenWindows 1
+		mn := WinGetMinMax(winname)
+		; TLog(mn)
+		if mn != 1 {
+			WinRestore(winname)
+		}
+		WinActivate(winname)
+		Sleep(300)
+		Send("+!b")
+	} else {
+		Send("{F10}")
+	}
+}
+
 $F10::
 {
 	KeyWait("F10")
@@ -140,6 +158,8 @@ $F12::
 		Send("{F12}")
 	}
 }
+
+
 
 
 
