@@ -114,6 +114,7 @@ $F9::
 {
 	KeyWait("F9")
 	if(KeyWait("F9", "DT0.3") == 1) {
+		WinCur := WinGetID("A")
 		winname := "ahk_exe Spotify.exe"
 		DetectHiddenWindows 1
 		mn := WinGetMinMax(winname)
@@ -124,8 +125,10 @@ $F9::
 		WinActivate(winname)
 		Sleep(300)
 		Send("+!b")
+		Sleep(1000)
+		WinActivate("ahk_id " . WinCur)
 	} else {
-		Send("{F10}")
+		Send("{F9}")
 	}
 }
 
