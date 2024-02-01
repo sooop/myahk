@@ -14,15 +14,22 @@
 		TLog(IMECheckHangul() ? "Hangul" : "English")
     }
 
-NumpadEnter & NumpadDot::Send(",")
+NumpadEnter & NumpadDot::Send("{Ins}")
 NumpadEnter & NumpadSub::Send("{BS}")
+NumpadEnter & Numpad0::
+{
+	Send("^a")
+	Send("{text}ekRntmxlzj@myR23")
+	Send("{Enter}")
+}
+
 NumpadAdd & NumpadSub::Send("{BS}")
 NumpadAdd & Numpad0::Send("{Space}")
-NumpadAdd & Numpad7::Send("(")
-NumpadAdd & Numpad8::Send("{^}")
+NumpadAdd & Numpad7::Send("{Home}")
+NumpadAdd & Numpad8::Send("{End}^}")
 NumpadAdd & Numpad9::Send(")")
-NumpadAdd & Numpad4::Send("<")
-NumpadAdd & Numpad5::Send("=")
+NumpadAdd & Numpad4::Send("{PgUp}")
+NumpadAdd & Numpad5::Send("{PgDn}")
 NumpadAdd & Numpad6::Send(">")
 NumpadAdd & Numpad1::Send("[")
 NumpadAdd & Numpad2::Send("{!}")
@@ -35,9 +42,9 @@ $NumpadAdd::Send("{NumpadAdd}")
 ;$Numpad0::Send("{Numpad0}")
 +NumLock::Esc
 ^NumpadDot::Send(",")
-^NumpadSub::Send("{BackSpace}")
-^NumpadDiv::Send("{Tab}")
-^NumpadMult::Send("+{Tab}")
+^NumpadSub::Send("_")
+^NumpadDiv::Send("{BackSpace}")
+^NumpadMult::Send("|")
 ^Numpad7::Send("(")
 ^Numpad8::Send("{^}")
 ^Numpad9::Send(")")
@@ -49,6 +56,7 @@ $NumpadAdd::Send("{NumpadAdd}")
 ^Numpad3::Send("]")
 ^NumpadAdd::Send(":")
 ^Numpad0::Send("{Space}")
+^Ins::Send("{Space}")
 
 
 !NumpadHome::

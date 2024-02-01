@@ -20,7 +20,7 @@ GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
 	EnterPassword(hk)
 	{
 		Send("^a")
-		Send("{text}rmfkepdltus@myR12")
+		Send("{text}ekRntmxlzj@myR23")
 		Send("{Enter}")
 	}
 
@@ -44,7 +44,7 @@ GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
 ^+BS::
 {
 	Send("^a")
-	Send("{text}rmfkepdltus@myR12")
+	Send("{text}ekRntmxlzj@myR23")
 	Send("{tab}")
 }
 #HotIf
