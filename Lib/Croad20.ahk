@@ -30,7 +30,7 @@ NumpadAdd & Numpad9::
 {
 	Send("{Ins}")
 	YN_Ins := GetKeyState("Insert", "T")
-	Tooltip(YN_Ins ? "Insert" : "Overwrite")
+	Tooltip(YN_Ins ? "Overwrite" : "Insert")
 	SetTimer(() => Tooltip(), 1000)
 }
 NumpadAdd & Numpad4::Send("{PgUp}")
@@ -40,12 +40,8 @@ NumpadAdd & Numpad1::Send("[")
 NumpadAdd & Numpad2::Send("{!}")
 NumpadAdd & Numpad3::
 {
-	Send("{Ins}")
-	YN_Ins := GetKeyState("Insert", "T")
-	MsgBox(YN_INS == "D" ? "Insert" : "Overwrite")
-	SetTimer(() => Tooltip(), 1000)
-}
 
+}
 $NumpadEnter::Send("{NumpadEnter}")
 $NumpadAdd::Send("{NumpadAdd}")
 ;Numpad0 & NumpadDot::Send(",")
@@ -55,8 +51,8 @@ $NumpadAdd::Send("{NumpadAdd}")
 +NumLock::Esc
 ^NumpadDot::Send(",")
 ^NumpadSub::Send("_")
-^NumpadDiv::Send("{BackSpace}")
 ^NumpadMult::Send("|")
+^NumpadDiv::Send("%")
 ^Numpad7::Send("(")
 ^Numpad8::Send("{^}")
 ^Numpad9::Send(")")
@@ -68,7 +64,6 @@ $NumpadAdd::Send("{NumpadAdd}")
 ^Numpad3::Send("]")
 ^NumpadAdd::Send(":")
 ^Numpad0::Send("{Space}")
-^Ins::Send("{Space}")
 
 
 !NumpadHome::
