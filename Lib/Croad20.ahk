@@ -15,7 +15,6 @@
     }
 
 NumpadEnter & NumpadDot::Send("{Ins}")
-NumpadEnter & NumpadSub::Send("{BS}")
 NumpadEnter & Numpad0::
 {
 	Send("^a")
@@ -27,13 +26,25 @@ NumpadAdd & NumpadSub::Send("{BS}")
 NumpadAdd & Numpad0::Send("{Space}")
 NumpadAdd & Numpad7::Send("{Home}")
 NumpadAdd & Numpad8::Send("{End}^}")
-NumpadAdd & Numpad9::Send(")")
+NumpadAdd & Numpad9::
+{
+	Send("{Ins}")
+	YN_Ins := GetKeyState("Insert", "T")
+	Tooltip(YN_Ins ? "Overwrite" : "Insert")
+}
 NumpadAdd & Numpad4::Send("{PgUp}")
 NumpadAdd & Numpad5::Send("{PgDn}")
-NumpadAdd & Numpad6::Send(">")
+NumpadAdd & Numpad6::Send("{Del}")
 NumpadAdd & Numpad1::Send("[")
 NumpadAdd & Numpad2::Send("{!}")
-NumpadAdd & Numpad3::Send("]")
+NumpadAdd & Numpad3::
+{
+	Send("{Ins}")
+	YN_Ins := GetKeyState("Insert", "T")
+	MsgBox(YN_INS == "D" ? "Insert" : "Overwrite")
+	SetTimer(() => Tooltip(), 1000)
+}
+
 $NumpadEnter::Send("{NumpadEnter}")
 $NumpadAdd::Send("{NumpadAdd}")
 ;Numpad0 & NumpadDot::Send(",")
@@ -75,6 +86,5 @@ $NumpadAdd::Send("{NumpadAdd}")
 	CROADNoKey(hk)
 	{
 		Tooltip("(" hk ") Not-assigned Numpad Hotkey")
-		Sleep(1000)
-		Tooltip()
+		SetTimer(() => Tooltip(), 1000)
 	}
