@@ -30,7 +30,8 @@ NumpadAdd & Numpad9::
 {
 	Send("{Ins}")
 	YN_Ins := GetKeyState("Insert", "T")
-	Tooltip(YN_Ins ? "Overwrite" : "Insert")
+	Tooltip(YN_Ins ? "Insert" : "Overwrite")
+	SetTimer(() => Tooltip(), 1000)
 }
 NumpadAdd & Numpad4::Send("{PgUp}")
 NumpadAdd & Numpad5::Send("{PgDn}")
