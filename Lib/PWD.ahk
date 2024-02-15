@@ -15,12 +15,17 @@ GroupAdd("GRP_XD", "ahk_exe Creative Cloud.exe")
 GroupAdd("GRP_XD", "Adobe XD")
 GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
 
+PWD_TEST := "helloworl!d!"
+PWD_GRP_PWD := "ekEntmxlzj@myR23"
+PWD_GRP_XD := "djehqlzb10!"
+PWD_GRP_TVW = "zQaAkRfp4#a8#FY"
+
 #HotIf WinActive("ahk_group GRP_PWD")
 ^+BS::
 	EnterPassword(hk)
 	{
 		Send("^a")
-		Send("{text}ekRntmxlzj@myR23")
+		Send("{text}" . PWD_GRP_PWD)
 		Send("{Enter}")
 	}
 
@@ -28,23 +33,27 @@ GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
 ^+BS::
 {
 	Send("^a")
-	Send("{text}djehqlzb10")
-	Send("{!}{Enter}")
+	Send("{text}" . PWD_GRP_XD)
+	Send("{Enter}")
 }
 
 #HotIf WinActive("ahk_group GRP_TVW")
 ^+BS::
 {
 	Send("^a")
-	Send("{text}zQaAkRfp4#a8#FY")
-	Send("{!}{Enter}")
+	Send("{text}" . PWD_GRP_TVW)
+	Send("{Enter}")
 }
 
 #HotIf WinActive("ahk_group GRP_VPN")
 ^+BS::
 {
 	Send("^a")
-	Send("{text}ekRntmxlzj@myR23")
+	Send("{text}" . PWD_GRP_PWD)
 	Send("{tab}")
 }
 #HotIf
+^+\::{
+	Send("{text}" . PWD_TEST)
+	Send("{Enter}")
+}
