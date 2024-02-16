@@ -29,9 +29,10 @@ OnExit(ExitFunc)
 ; OPTIONS: $(Same key will be sent in action), ~(do not block original key)
 
 #Include <Utilities>
-#Include <Pwd>
-#Include <CommonHotKey>
-#Include <Croad20>
+#Include <HotKeys>
+#Include <HotStrings>
+#Include <Numpad>
+#Include <Password>
 
 #h::TLog("Win + H is not allowed befause it occurs IME clitch.")
 ^+q::
