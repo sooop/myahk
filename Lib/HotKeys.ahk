@@ -38,6 +38,8 @@ $Space::
 		Send("{Space}")
 	}
 }
+!F8::Send("{Media_Next}")
+
 
 
 
@@ -158,16 +160,20 @@ $F9::
 		WinCur := WinGetID("A")
 		winname := "ahk_exe Spotify.exe"
 		DetectHiddenWindows 1
-		mn := WinGetMinMax(winname)
-		; TLog(mn)
-		if mn != 1 {
-			WinRestore(winname)
+		try {
+			mn := WinGetMinMax(winname)
+			; TLog(mn)
+			if mn != 1 {
+				WinRestore(winname)
+			}
+			WinActivate(winname)
+			Sleep(300)
+			Send("+!b")
+			Sleep(1000)
+			WinActivate("ahk_id " . WinCur)
+		} catch {
+			MsgBox("Spotify is not running.")
 		}
-		WinActivate(winname)
-		Sleep(300)
-		Send("+!b")
-		Sleep(1000)
-		WinActivate("ahk_id " . WinCur)
 	} else {
 		Send("{F9}")
 	}
