@@ -104,6 +104,13 @@ SC1F2 & /::Send("{Volume_Mute}")
 SC1F2 & [::Send("{Home}")
 SC1F2 & ]::Send("{End}")
 SC1F2 & \::Send("{Media_Play_Pause}")
+
+SC11D & Up::Send("{Volume_Up}")
+SC11D & Down::Send("{Volume_Down}")
+SC11D & Left::Send("{Media_Prev}")
+SC11D & Right::Send("{Media_Next}")
+SC11D & Del::Send("{Media_Play_Pause}")
+
 $SC11D:: {
 	if (KeyWait("SC11D", "T0.3") == 1) {
 		Send("{SC11D}")
