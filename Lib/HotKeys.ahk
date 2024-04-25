@@ -208,3 +208,27 @@ $F12::
 		Send("{F12}")
 	}
 }
+
+^+.::
+{
+	;SendInput("https://www.smtownandstore.com/")
+	SendInput("∙")
+}
+
+^+,::
+{
+	;SendInput("https://www.smtownandstore.com/")
+	SendInput("…")
+}
+
+^+]::
+{
+	;SendInput("https://www.smtownandstore.com/")
+	SendInput("responsibility@smtown.com")
+}
+
+^+[::
+{
+	SendInput("∘")
+}
+; ∘

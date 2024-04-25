@@ -54,6 +54,7 @@ PWD_GRP_TVW := "zQaAkRfp4#a8#FY"
 }
 #HotIf
 ^+\::{
-	Send("{text}" . PWD_GRP_PWD)
+	SendInput(PWD_GRP_PWD)
+	;Send("{text}" . PWD_GRP_PWD)
 	Send("{Enter}")
 }
