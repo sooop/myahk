@@ -30,8 +30,9 @@
 <+Esc::Send("``")
 $Space::
 {
-	if WinActive("ahk_group GRP_WORDP") and
-		A_PriorHotkey == ThisHotkey and
+	;if WinActive("ahk_group GRP_WORDP") and
+		;A_PriorHotkey == ThisHotkey and
+	if A_PriorHotkey == ThisHotkey and
 		A_TimeSincePriorHotkey < 200 {
 		Send("{BS}{Enter}")
 	} else {
@@ -39,6 +40,45 @@ $Space::
 	}
 }
 !F8::Send("{Media_Next}")
+^+.::
+{
+	;SendInput("https://www.smtownandstore.com/")
+	SendInput("∙")
+}
+
+^+,::
+{
+	;SendInput("https://www.smtownandstore.com/")
+	SendInput("…")
+}
+
+^+]::
+{
+	;SendInput("https://www.smtownandstore.com/")
+	SendInput("responsibility@smtown.com")
+}
+
+^+[::
+{
+	SendInput("∘")
+}
+
+SC1F2 & Numpad0::
+SC1F2 & Numpad1::
+SC1F2 & Numpad2::
+SC1F2 & Numpad3::
+SC1F2 & Numpad4::
+SC1F2 & Numpad5::
+SC1F2 & Numpad6::
+SC1F2 & Numpad7::
+SC1F2 & Numpad8::
+SC1F2 & Numpad9::
+SC1F2 & y::
+{
+
+	nn := String(Random(9))
+	Send(nn)
+}
 
 
 
@@ -88,7 +128,7 @@ $Esc::
 
 
 #HotIf
-SC1F2::Send("{SC1F2}")
+$SC1F2::Send("{SC1F2}")
 SC1F2 & u::Send("{Media_Prev}")
 SC1F2 & i::Send("{Media_Play_Pause}")
 SC1F2 & o::Send("{Media_Next}")
@@ -208,27 +248,3 @@ $F12::
 		Send("{F12}")
 	}
 }
-
-^+.::
-{
-	;SendInput("https://www.smtownandstore.com/")
-	SendInput("∙")
-}
-
-^+,::
-{
-	;SendInput("https://www.smtownandstore.com/")
-	SendInput("…")
-}
-
-^+]::
-{
-	;SendInput("https://www.smtownandstore.com/")
-	SendInput("responsibility@smtown.com")
-}
-
-^+[::
-{
-	SendInput("∘")
-}
-; ∘
