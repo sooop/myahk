@@ -52,11 +52,11 @@ $Space::
 	SendInput("…")
 }
 
-^+]::
-{
-	;SendInput("https://www.smtownandstore.com/")
-	SendInput("responsibility@smtown.com")
-}
+;^+]::
+;{
+	;;SendInput("https://www.smtownandstore.com/")
+	;SendInput("responsibility@smtown.com")
+;}
 
 ^+[::
 {
