@@ -58,10 +58,6 @@ $Space::
 	;SendInput("responsibility@smtown.com")
 ;}
 
-^+[::
-{
-	SendInput("∘")
-}
 
 SC1F2 & Numpad0::
 SC1F2 & Numpad1::
@@ -129,24 +125,27 @@ $Esc::
 
 #HotIf
 $SC1F2::Send("{SC1F2}")
-SC1F2 & u::Send("{Media_Prev}")
-SC1F2 & i::Send("{Media_Play_Pause}")
-SC1F2 & o::Send("{Media_Next}")
-SC1F2 & s::Send("{Left}")
-SC1F2 & d::Send("{Down}")
-SC1F2 & f::Send("{Right}")
-SC1F2 & e::Send("{Up}")
+SC1F2 & y::Send("{Media_Prev}")
+SC1F2 & u::Send("{Media_Play_Pause}")
+SC1F2 & i::Send("{Media_Next}")
+
+;SC1F2 & s::Send("{Left}")
+;SC1F2 & d::Send("{Down}")
+;SC1F2 & f::Send("{Right}")
+;SC1F2 & e::Send("{Up}")
 SC1F2 & h::Send("{Left}")
 SC1F2 & j::Send("{Down}")
 SC1F2 & l::Send("{Right}")
 SC1F2 & k::Send("{Up}")
-SC1F2 & ,::Send("{Volume_Down}")
-SC1F2 & .::Send("{Volume_Up}")
-SC1F2 & /::Send("{Volume_Mute}")
+;SC1F2 & ,::Send("{Volume_Down}")
+;SC1F2 & .::Send("{Volume_Up}")
+;SC1F2 & /::Send("{Volume_Mute}")
 SC1F2 & [::Send("{Home}")
 SC1F2 & ]::Send("{End}")
-SC1F2 & \::Send("{Media_Play_Pause}")
+;SC1F2 & \::Send("{Media_Play_Pause}")
 
+SC1F2 & .::SendInput("∙")
+SC1F2 & ,::SendInput("∘")
 SC11D & Up::Send("{Volume_Up}")
 SC11D & Down::Send("{Volume_Down}")
 SC11D & Left::Send("{Media_Prev}")
