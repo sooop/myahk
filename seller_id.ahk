@@ -1,4 +1,8 @@
-my_str := ["responsibility@smtown.com", "qxtrade.kr", "qxplan2@gmail.com"]
+my_str := ["responsibility@smtown.com",
+			"responsibility@ssoakstore.com",
+			"qxtrade.kr",
+			"qxplan2@gmail.com"
+		  ]
 
 CB_Close(gui) {
 	;ExitApp()
