@@ -35,9 +35,7 @@ F15 & .::Send("▪")
 F15 & /::Send("{Volume_Mute}")
 F15 & [::Send("{Home}")
 F15 & ]::Send("{End}")
-F15 & \::Send("{SC1F2}")
 F15 & `;::Send("{SC1F2}")
-F15 & '::Send("``")
 F15 & Space::Send("{SC1F2}")
 
 
@@ -142,7 +140,6 @@ $Esc::
 
 #HotIf
 
-;F15::Send("{SC1F2}")
 
 
 $SC11D:: {
