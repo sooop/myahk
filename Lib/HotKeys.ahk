@@ -37,6 +37,7 @@ F15 & [::Send("{Home}")
 F15 & ]::Send("{End}")
 F15 & `;::Send("{SC1F2}")
 F15 & Space::Send("{SC1F2}")
+F15 & Enter::Send("{SC1F1}")
 
 
 
