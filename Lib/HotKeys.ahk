@@ -145,13 +145,6 @@ $Esc::
 
 
 
-$SC11D:: {
-	if (KeyWait("SC11D", "T0.3") == 1) {
-		Send("{SC11D}")
-	} else {
-		SetCapsLockState(!GetKeyState("CapsLock", "T"))
-	}
-}
 
 >+Esc::Send("~")
 
