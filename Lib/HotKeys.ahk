@@ -38,8 +38,14 @@ F15 & ]::Send("{End}")
 F15 & `;::Send("{SC1F2}")
 F15 & Space::Send("{SC1F2}")
 F15 & Enter::Send("{SC1F1}")
+F15 & Backspace::Send("{Del}")
+F15 & Del::Send("{Backspace}")
 F16::Send("·")
 F17::Send("∙")
+F15 & Up::Send("{Pgup}")
+F15 & Down::Send("{Pgdn}")
+F15 & Left::Send("{Home}")
+F15 & Right::Send("{End}")
 
 
 
