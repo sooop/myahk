@@ -47,6 +47,10 @@ F15 & Up::Send("{Pgup}")
 F15 & Down::Send("{Pgdn}")
 F15 & Left::Send("{Home}")
 F15 & Right::Send("{End}")
+F15 & F7::Send("{Media_Prev}")
+F15 & F8::Send("{Media_Next}")
+F15 & F5::Send("{Media_Pause}")
+F15 & F6::Send("{Media_Stop}")
 
 
 
@@ -96,7 +100,6 @@ SC1F2 & Numpad8::
 SC1F2 & Numpad9::
 SC1F2 & y::
 {
-
 	nn := String(Random(9))
 	Send(nn)
 }
