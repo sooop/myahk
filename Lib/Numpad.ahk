@@ -42,5 +42,5 @@
 	CROADNoKey(hk)
 	{
 		Tooltip("(" hk ") Not-assigned Numpad Hotkey")
-		SetTimer(() => Tooltip(), 1000)
+		SetTimer(() => Tooltip(), -2000)
 	}

@@ -33,6 +33,7 @@ OnExit(ExitFunc)
 #Include <HotStrings>
 #Include <Numpad>
 #Include <Password>
+#Include <MouseSpeed>
 
 #h::TLog("Win + H is not allowed befause it occurs IME clitch.")
 ^+q::

@@ -10,5 +10,5 @@ GroupAdd("GRP_WORDP", "ahk_exe wordpad.exe")
 TLog(msg)
 {
 	Tooltip(msg)
-	SetTimer(() => Tooltip())
+	SetTimer(() => Tooltip(), -2000)
 }
