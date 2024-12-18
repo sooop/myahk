@@ -45,10 +45,13 @@ F15 & Up::Send("{Pgup}")
 F15 & Down::Send("{Pgdn}")
 F15 & Left::Send("{Home}")
 F15 & Right::Send("{End}")
-F15 & F7::Send("{Media_Prev}")
 F15 & F8::Send("{Media_Next}")
-F15 & F5::Send("{Media_Pause}")
+F15 & F7::Send("{Media_Prev}")
 F15 & F6::Send("{Media_Stop}")
+F15 & F5::Send("{Media_Pause}")
+F15 & F10::Send("{Volume_Down}")
+F15 & F11::Send("{Volume_Up}")
+F15 & F12::Send("{Volume_Mute}")
 F16::Send("·")
 F17::Send("∙")
 
@@ -188,6 +191,7 @@ $F4::
 	}
 }
 
+F15 & F9::
 $F9::
 {
 	KeyWait("F9")
