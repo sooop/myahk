@@ -60,6 +60,14 @@ F15 & =::Send("{Shift down}{End}{Shift up}")
 F15 & -::Send("{Shift down}{Home}{Shift up}")
 F15 & 9::Send("{Shift down}{Ctrl Down}{Home}{Ctrl Up}{Shift up}")
 F15 & 0::Send("{Shift down}{Ctrl Down}{End}{Ctrl Up}{Shift up}")
+F15 & Numpad4::Send("{Shift down}{Left}{Shift up}")
+F15 & Numpad6::Send("{Shift down}{Right}{Shift up}")
+F15 & Numpad8::Send("{Shift down}{Up}{Shift up}")
+F15 & Numpad2::Send("{Shift down}{Down}{Shift up}")
+F15 & Numpad7::Send("{Shift down}{Home}{Shift up}")
+F15 & Numpad1::Send("{Shift down}{End}{Shift up}")
+F15 & Numpad9::Send("{Shift down}{Pgup}{Shift up}")
+F15 & Numpad3::Send("{Shift down}{Pgdn}{Shift up}")
 
 
 
@@ -97,17 +105,17 @@ $Space::
 ;}
 
 
-SC1F2 & Numpad0::
-SC1F2 & Numpad1::
-SC1F2 & Numpad2::
-SC1F2 & Numpad3::
-SC1F2 & Numpad4::
-SC1F2 & Numpad5::
-SC1F2 & Numpad6::
-SC1F2 & Numpad7::
-SC1F2 & Numpad8::
-SC1F2 & Numpad9::
-SC1F2 & y::
+SC1F1 & Numpad0::
+SC1F1 & Numpad1::
+SC1F1 & Numpad2::
+SC1F1 & Numpad3::
+SC1F1 & Numpad4::
+SC1F1 & Numpad5::
+SC1F1 & Numpad6::
+SC1F1 & Numpad7::
+SC1F1 & Numpad8::
+SC1F1 & Numpad9::
+SC1F1 & y::
 {
 	nn := String(Random(9))
 	Send(nn)
