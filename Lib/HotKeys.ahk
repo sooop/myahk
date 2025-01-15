@@ -64,7 +64,6 @@ F15 & =::Send("{Shift down}{End}{Shift up}")
 F15 & -::Send("{Shift down}{Home}{Shift up}")
 F15 & 9::Send("{Shift down}{Ctrl Down}{Home}{Ctrl Up}{Shift up}")
 F15 & 0::Send("{Shift down}{Ctrl Down}{End}{Ctrl Up}{Shift up}")
-<<<<<<< Updated upstream
 F15 & Numpad4::Send("{Shift down}{Left}{Shift up}")
 F15 & Numpad6::Send("{Shift down}{Right}{Shift up}")
 F15 & Numpad8::Send("{Shift down}{Up}{Shift up}")
@@ -73,12 +72,10 @@ F15 & Numpad7::Send("{Shift down}{Home}{Shift up}")
 F15 & Numpad1::Send("{Shift down}{End}{Shift up}")
 F15 & Numpad9::Send("{Shift down}{Pgup}{Shift up}")
 F15 & Numpad3::Send("{Shift down}{Pgdn}{Shift up}")
-=======
 #!=::Send("{Shift down}{End}{Shift up}")
 #!-::Send("{Shift down}{Home}{Shift up}")
 #!9::Send("{Shift down}{Ctrl Down}{Home}{Ctrl Up}{Shift up}")
 #!0::Send("{Shift down}{Ctrl Down}{End}{Ctrl Up}{Shift up}")
->>>>>>> Stashed changes
 
 
 
