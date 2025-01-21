@@ -3,10 +3,10 @@
 ;{
 ;	SetCapsLockState(!GetKeyState("CapsLock", "T"))
 ;}
-!NumpadEnter::
-    {
-		TLog(IMECheckHangul() ? "Hangul" : "English")
-    }
+;!NumpadEnter::
+    ;{
+		;TLog(IMECheckHangul() ? "Hangul" : "English")
+    ;}
 
 +NumLock::Esc
 ^NumpadDot::Send(",")
