@@ -16,9 +16,9 @@ GroupAdd("GRP_XD", "Adobe XD")
 GroupAdd("GRP_TVW", "ahk_exe TeamViewer.exe")
 
 PWD_TEST := "helloworl!d!"
-PWD_GRP_PWD := "rjqnrdli@myR23"
-PWD_GRP_TVW := "rjqnrdli@myR23"
+PWD_GRP_PWD := "rjqnrdlo@myR23"
 PWD_GRP_XD := "djehqlzb10!"
+PWD_GRP_TVW := "rjqnrdlo@myR23"
 
 #HotIf WinActive("ahk_group GRP_PWD")
 ^+BS::
